@@ -124,17 +124,22 @@
 
         const deleteEmp = async (id) => {
             console.log("id >>",id)
-
-            //fetch api
-            const response = await fetch("/api/deleteEmployee/"+id, {
+            
+            let userConfirmed = confirm(`Are you sure you want to delete employee with id: ${id}`)
+            if(userConfirmed){
+                //fetch api
+                const response = await fetch("/api/deleteEmployee/"+id, {
                 method: "DELETE",
                 headers: {"Content-Type": "application/json"}
             })
-            
-            //now store the response in result variable
-
-            const result = await response.json()
-            console.log("Deleted successfully.")
-            alert(`Employee with id: ${id} deleted successfully!`)
-            loadEmployeeData()
+             //now store the response in result variable
+                const result = await response.json()
+                alert(`Employee with id: ${id} deleted successfully!`)
+                console.log("Deleted successfully.")
+                loadEmployeeData()
+            }
+            else{
+                alert("User cancelled.")
+                console.log("User denied permission.")
+            }
         }
