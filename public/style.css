@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* index.html */
+
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    background-color: #e8f9fd;
+}
+.indexbox1,.indexbox2{
+    display: flex;
+    flex-direction: column;
+}
+.header-box{
+    text-align: center;
+    margin: 20px;
+}
+.button-box{
+    display:flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+.left-side-box{
+    display: flex;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+.btn{
+    width:70px;
+    font-size: 1rem;
+    padding:5px;
+    border:0.5px solid black;
+    border-radius: 5px;
+    background-color:  #fbbcb4;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.image{
+    height: 20px;
+    width: 20px;
+}
+
+#employee-table{
+    border: none;
+    
+}
+td,th{
+    border: 0.5px solid black;
+    border-radius: 3px;
+    padding:5px;
+    margin:0;
+   
+}
+
+
+.icon-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* add.html */
+#add-box{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 5px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        background-color: #ffe8f3;
+    }
+
+/* update.html */
+#update-box{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 5px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        background-color: #dcf9f8;
+}
+#employeeUpdateForm,#employeeAddForm{
+    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 8px;
+    max-width: 300px;
+}
+input{
+    padding:3px;
+    border-radius: 3px;
+}
+.update-back-btn-box,.add-back-btn-box{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}

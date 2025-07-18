@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="indexbox1">
+        <div class="header-box">
+            <h1>Employee Management System <i class="fa-solid fa-users"></i> </h1>
+        </div>
+        <div class="button-box">
+            <div class="left-side-box">
+                <button type="button" onclick="loadEmployeeData()" class="load-btn btn">
+                    Refresh 
+                </button>
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            <div class="right-side-box">
+                <i class="fa-solid fa-user-plus add image" onclick="openAddForm()"></i>
+            </div>
+        </div>
+    </div>
+    <div class="indexbox2">
+        <table id="employee-table" border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+    <!-- add form -->
+     <div id="add-box"> 
+        <form id="employeeAddForm">
+            <h2>Add Employee Details</h2>
+            <label>Enter employee name </label><br>
+            <input type="text" id="addName" required><br><br>
+            <label>Enter salary</label><br>
+            <input type="number" id="addSalary" required><br><br>
+            <label>Enter age</label><br>
+            <input type="number" id="addAge" required><br><br>
+            <div class="add-back-btn-box">
+                <button type="submit" class="add-btn btn">Submit</button>
+                <button type="button" class="back-btn btn" onclick="closeAddForm()">Back</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- updateform -->
+    <div id="update-box">
+
+            <form id="employeeUpdateForm">
+                <h2>Update Employee</h2>
+                <label>Enter id to update</label><br>
+                <input disabled type="number" id="upId" required><br>
+                <label>Enter employee name </label><br>
+                <input type="text" id="upName" required><br>
+                <label>Enter salary</label><br>
+                <input type="number" id="upSalary" required><br>
+                <label>Enter age</label><br>
+                <input type="number" id="upAge" required><br><br>
+                <div class="update-back-btn-box">
+                    <button type="submit" class="add-btn btn">Update</button>
+                    <button type="button" onclick="closeUpdateForm()" class="back-btn btn">Cancel</button>
+                </div>
+            </form>
+    </div>   
+
+    <script src="./employee.js"></script>
+</body>
+
+</html>
